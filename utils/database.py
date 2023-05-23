@@ -69,5 +69,5 @@ Need More Credits? Contact @TechZBots_Support""",
             print(user_id, e)
 
 
-asyncio.run(broadcast())
+# asyncio.run(broadcast())
 # asyncio.run(give_credits())
