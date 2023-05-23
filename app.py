@@ -1,6 +1,5 @@
 from flask import Flask
 app = Flask(__name__)
-from bot import start
 
 @app.route('/')
 def hello_world():
