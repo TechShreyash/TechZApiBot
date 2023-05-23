@@ -8,6 +8,7 @@ print("[INFO]: STARTING MONGO DB CLIENT")
 mongo_client = MongoClient(
     "mongodb+srv://techz:bots@cluster0.uzrha.mongodb.net/?retryWrites=true&w=majority"
 )
+print("[INFO]: SUCCESSFULLY CONNECTED TO MONGO DB")
 db = mongo_client.techzapi
 
 userdb = db.userdb
