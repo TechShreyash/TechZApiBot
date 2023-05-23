@@ -1,0 +1,9 @@
+pyrogram
+pyromod
+aiohttp
+TgCrypto
+requests
+motor
+dnspython
+uvloop
+flask
