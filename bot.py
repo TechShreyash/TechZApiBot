@@ -2,7 +2,7 @@ from pyrogram.types import Message
 from pyrogram import Client, filters, idle
 from pyrogram.client import Client
 import asyncio
-# from uvloop import install
+from uvloop import install
 from utils.database import create_newkey, get_apikey, get_user
 from contextlib import closing, suppress
 
@@ -159,15 +159,18 @@ import requests
 
 async def pinger():
     while True:
-        print("[INFO]: PINGING")
-        requests.get("https://techzapibot.onrender.com/")
-        await asyncio.sleep(60)
+        try:
+            print("[INFO]: PINGING")
+            requests.get("https://techzapibot.onrender.com", timeout=20)
+            await asyncio.sleep(10)
+        except:
+            continue
 
 
 if __name__ == "__main__":
-    # install()
+    install()
     with closing(loop):
         with suppress(asyncio.exceptions.CancelledError):
-            # loop.create_task(pinger())
+            loop.create_task(pinger())
             loop.run_until_complete(main())
             loop.run_until_complete(asyncio.sleep(3.0))
