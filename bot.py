@@ -171,6 +171,6 @@ if __name__ == "__main__":
     install()
     with closing(loop):
         with suppress(asyncio.exceptions.CancelledError):
-            loop.create_task(pinger())
+            # loop.create_task(pinger())
             loop.run_until_complete(main())
             loop.run_until_complete(asyncio.sleep(3.0))
