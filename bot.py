@@ -10,7 +10,7 @@ app = Client(
     "TechZBot",
     api_id=2344247,
     api_hash="853cae451f8091db916cd9ad395bbf12",
-    bot_token="5817679103:AAFpywybrmzQTvToJXGptPYKxTu-nx7sSmI",
+    bot_token="5817679103:AAEhbhsOHZP0giq0gnVFM1g6KyJz0EhbScU",
 )
 
 
