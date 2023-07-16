@@ -61,7 +61,7 @@ Support Group : @TechZBots_Support""",
             
 Use /reset to reset your api key
 
-Documentation: https://api.techzbots.live/docs
+Documentation: https://api1.techzbots.live/docs
 Support: @TechZBots_Support""",
         )
 
@@ -73,14 +73,14 @@ Support: @TechZBots_Support""",
         
 Use /reset to reset your api key
 
-Documentation: https://api.techzbots.live/docs
+Documentation: https://api1.techzbots.live/docs
 Support: @TechZBots_Support"""
     )
     await asyncio.sleep(1)
     await message.reply_text(
-        """🎁 You got 20000 credits for free
+        """🎁 You got 1000 credits for free
     
-Note: You will get 20000 credits every month for free, To get more credits, contact @TechZBots_Support"""
+Note: You will get 1000 credits every day for free, To get more credits, contact @TechZBots_Support"""
     )
 
 
@@ -109,7 +109,7 @@ Support Group : @TechZBots_Support""",
         
 Use /reset to reset your api key
 
-Documentation: https://api.techzbots.live/docs
+Documentation: https://api1.techzbots.live/docs
 Support: @TechZBots_Support"""
     )
 
@@ -154,23 +154,10 @@ async def main():
 
 
 loop = asyncio.get_event_loop()
-import requests
-
-
-async def pinger():
-    while True:
-        try:
-            print("[INFO]: PINGING")
-            requests.get("https://techzapibot.onrender.com", timeout=20)
-            await asyncio.sleep(10)
-        except:
-            continue
-
 
 if __name__ == "__main__":
     install()
     with closing(loop):
         with suppress(asyncio.exceptions.CancelledError):
-            # loop.create_task(pinger())
             loop.run_until_complete(main())
             loop.run_until_complete(asyncio.sleep(3.0))

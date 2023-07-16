@@ -48,21 +48,25 @@ async def give_credits():
 
 
 async def broadcast():
-    app = Client(
-        "TechZBot",
-        api_id=2344247,
-        api_hash="853cae451f8091db916cd9ad395bbf12",
-        bot_token="5817679103:AAFpywybrmzQTvToJXGptPYKxTu-nx7sSmI",
-    )
-    await app.start()
+    # app = Client(
+    #     "TechZBot",
+    #     api_id=2344247,
+    #     api_hash="853cae451f8091db916cd9ad395bbf12",
+    #     bot_token="5817679103:AAEhbhsOHZP0giq0gnVFM1g6KyJz0EhbScU",
+    # )
+    # await app.start()
+    c = 0 
     async for user in userdb.find({}):
+        c += 1
+        print(c)
+        continue
         try:
             user_id = user.get("user_id")
             await app.send_message(
                 user_id,
-                f"""**🎁 You Got 10k Credits More For Free This Month**
+                f"""**♻️ Domains Changed
 
-Need More Credits? Contact @TechZBots_Support""",
+api2.techzbots.live""",
             )
             print(user_id, "Sent")
         except Exception as e:
